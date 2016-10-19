@@ -1,14 +1,24 @@
-value=eval(input('How many?'))
-function=input('How combine? (*/+-)')
-unit=eval(input('How much?'))
-while(type(value)==int and 
-type(unit)==int):
+value=0
+function='+'
+unit=0
+print('Python calculator. Enter a letter to close.')
+while True:
+  try:
+    value=eval(input('How many? '))
+  except:
+    break
+  function=input('How combine? (*/+-) ')
+  try:
+    unit=eval(input('How much? '))
+  except:
+    break
+
   if(function=='+'):
-    result=value+unit
+    value=value+unit
   elif(function=='-'):
-    result=value-unit
+    value=value-unit
   elif(function=='*'):
-    result=value*unit
+    value=value*unit
   elif(function=='/'):
-    result=value/unit
-  print(result)
+    value=value/unit
+  print(value)
