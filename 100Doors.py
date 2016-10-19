@@ -10,6 +10,11 @@ while(skip<100):
     for missed in range(door-skip,skip):
       print(doors[missed],end='')
     print(doors[door],end='')
-    door=door+skip
+    door=door+skip+1
   print('\n')
   skip=skip+1
+print('The following doors are left open: ',end='')
+for door in [door for door,open in enumerate(doors) if open=='O']:
+  print(',',end='')
+  print(door+1,end='')
+print('\n')
