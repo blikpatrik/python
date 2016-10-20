@@ -8,3 +8,5 @@ if(task==2):
   todo.append(input("Sure, what's in plan? \n"))
 if(task==3):
   todo.remove(input("OK, what's complete?"))
+if(task==4):
+  todo.mark()
