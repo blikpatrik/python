@@ -98,3 +98,4 @@ while True:
         hit=circle
       else:
         hit=cross
+
